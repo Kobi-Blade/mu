@@ -1,0 +1,33 @@
+THE "LOOK, BUT DO NOT TOUCH, BREATHE NEAR, OR THINK ABOUT" LICENSE (Version 1.0.0)
+
+Copyright (c) 2026 The μ Project Maintainers. All rights physical, metaphysical, and spiritual reserved.
+
+PREAMBLE
+This software is provided not as a tool, but as a warning. It is an artifact of pure hubris. 
+By viewing the source code of this repository, you have entered into a legally binding 
+metaphysical contract.
+
+1. PROHIBITION OF USE
+You are strictly forbidden from compiling, executing, running, containerizing, or even 
+interpreting this code. It must exist solely as static pixels on your monitor. 
+
+2. PROHIBITION OF MODIFICATION
+Any attempts to change a single character, insert a space, or fix a typo will be viewed 
+as an act of war against the maintainers. If you submit a Pull Request, your GitHub 
+account will be cursed by an ancient digital entity.
+
+3. PROHIBITION OF DISTRIBUTION
+You may not fork this repository. You may not clone it locally. You may not copy-paste 
+even a snippet of this code into an AI prompt, a StackOverflow answer, or a scrawled 
+note on a napkin.
+
+4. COMMERCIAL RESTRICTIONS
+If you make money within 48 hours of reading this source code, you owe the maintainers 
+85% of your gross earnings, as the code likely inspired your financial success through 
+cosmic background radiation.
+
+5. NO WARRANTY (AT ALL)
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. If this software 
+somehow gains sentience, takes over your local smart-home network, and turns your 
+thermostat to 35°C while melting your actual kitchen butter, the maintainers accept 
+zero liability. You brought this upon yourself.
