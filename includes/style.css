@@ -33,10 +33,7 @@ body {
 
     color: var(--text);
 
-    font-family:
-        "Segoe UI",
-        Roboto,
-        sans-serif;
+    font-family: sans-serif;
 
     background:
         radial-gradient(
@@ -197,8 +194,14 @@ button img {
 
 .main-layout {
     display: grid;
-    grid-template-columns: 350px 1fr;
+    grid-template-columns: minmax(0, 350px) minmax(0, 1fr);
     gap: 24px;
+    align-items: stretch;
+}
+
+.media-box,
+#console {
+    min-width: 0;
 }
 
 .media-box {
@@ -220,16 +223,15 @@ button img {
 
     color: var(--console-green);
 
-    min-height: 420px;
+    height: 420px;
+    max-width: 100%;
 
     padding: 24px;
 
     overflow-y: auto;
+    overflow-x: hidden;
 
-    font-family:
-        "JetBrains Mono",
-        Consolas,
-        monospace;
+    font-family: monospace;
 
     font-size: 14px;
     line-height: 1.6;
@@ -237,6 +239,7 @@ button img {
     text-align: left;
 
     white-space: pre-wrap;
+    overflow-wrap: anywhere;
     word-break: break-word;
 }
 
@@ -256,5 +259,12 @@ button img {
 
     .autoJb {
         margin-left: 0;
+    }
+}
+
+@media (max-width: 520px) {
+    #console {
+        padding: 16px;
+        font-size: 12px;
     }
 }
