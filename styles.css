@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #0b0d10;
+  color: #c8ced8;
+  font: 15px/1.45 "Segoe UI", system-ui, -apple-system, sans-serif;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#brand {
+  text-align: center;
+  padding: 20px 16px;
+  background: #0e1116;
+  border-bottom: 1px solid #1e2732;
+  flex-shrink: 0;
+}
+
+#brand img {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  border-radius: 50%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+#brand b {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #e6ebf2;
+  vertical-align: middle;
+}
+
+#wrap {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 24px 18px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#state {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #1e2732;
+}
+
+#out {
+  white-space: pre-wrap;
+  font: 12px/1.5 "Courier New", Consolas, monospace;
+  background: #11151b;
+  border: 1px solid #1e2732;
+  border-radius: 6px;
+  padding: 14px 16px;
+  flex: 1;
+  overflow-y: auto;
+  resize: vertical;
+}
+
+/* Color classes */
+.ok { color: #7fd0a0; }
+.bad { color: #d08a7f; }
+.warn { color: #d8c07f; }
+
+/* Scrollbar styling */
+#out::-webkit-scrollbar {
+  width: 10px;
+}
+
+#out::-webkit-scrollbar-track {
+  background: #0b0d10;
+}
+
+#out::-webkit-scrollbar-thumb {
+  background: #1e2732;
+  border-radius: 5px;
+}
+
+#out::-webkit-scrollbar-thumb:hover {
+  background: #2a3038;
+}
+
+/* Index-specific styles */
+#det {
+  font-size: 13px;
+  color: #8b95a3;
+  margin: 0 0 4px;
+}
+
+#det b {
+  color: #c8ced8;
+  font-weight: 600;
+}
+
+#cache {
+  font-size: 12px;
+  color: #5c6672;
+  margin: 0 0 10px;
+  min-height: 14px;
+}
+
+#cache.cacheok {
+  color: #7fd0a0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #brand {
+	padding: 16px 12px;
+  }
+
+  #brand img {
+	width: 28px;
+	height: 28px;
+	margin-right: 8px;
+  }
+
+  #brand b {
+	font-size: 16px;
+  }
+
+  #wrap {
+	padding: 16px 12px;
+  }
+
+  #state {
+	font-size: 16px;
+  }
+
+  #out {
+	font-size: 11px;
+	padding: 12px 14px;
+  }
+}

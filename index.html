@@ -1,47 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" manifest="cache.manifest">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSSFontFace Exploit</title>
-    <link rel="stylesheet" href="includes/style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <header class="hero-card">
-        <h1>CSSFontFace UAF Exploit</h1>
-        <h3 id="UA">Running on:</h3>
-      </header>
-
-      <div class="controls-card">
-        <form id="kernel-options">
-          <input type="radio" name="kernel" id="netctrl-exploit" value="netctrl" />
-          <label for="netctrl-exploit">NetCtrl</label>
-
-          <input type="radio" name="kernel" id="lapse-exploit" value="lapse" />
-          <label for="lapse-exploit">Lapse</label>
-        </form>
-
-        <button id="jailbreak" type="button">
-          <img src="includes/gh.png" alt="Run" />
-        </button>
-
-        <div class="autoJb">
-          <label for="autoJbInput" id="autoJbLabel">Auto Jailbreak</label>
-          <input class="mt-2" id="autoJbInput" type="checkbox" />
-        </div>
-      </div>
-
-      <div class="main-layout">
-        <div class="media-box">
-          <img src="includes/cat.jpg" alt="A cat staring at you" />
-        </div>
-
-        <pre id="console">Ready. Awaiting execution...</pre>
-      </div>
-    </div>
-
-    <script src="src/main.js"></script>
-    <script src="includes/script.js"></script>
-  </body>
+<html lang="en" manifest="cache.appcache">
+	<head>
+		<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width,initial-scale=1">
+				<title>Slopkit</title>
+				<link rel="stylesheet" href="styles.css">
+</head>
+	<body>
+		<div id="brand">
+			<img src="assets/logo.jpg" alt="" width="32" height="32">
+				<b>SLOPKIT</b>
+		</div>
+		<div id="wrap">
+			<div id="state">detecting firmware...</div>
+			<div id="det"></div>
+			<div id="cache"></div>
+		</div>
+		<script src="js/index.js"></script>
+	</body>
 </html>

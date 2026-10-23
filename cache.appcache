@@ -1,0 +1,24 @@
+CACHE MANIFEST
+index.html
+pages/run_lapse.html
+pages/run_poops.html
+styles.css
+js/index.js
+js/chain_lapse.js
+js/chain_poops.js
+js/core.js
+js/int64.js
+js/mem.js
+js/ps4_offsets.js
+js/rpc_worker.js
+assets/logo.jpg
+assets/payload.bin
+assets/patches/1100.bin
+
+NETWORK:
+*
+
+FALLBACK:
+index.html index.html
+pages/run_lapse.html pages/run_lapse.html
+pages/run_poops.html pages/run_poops.html
