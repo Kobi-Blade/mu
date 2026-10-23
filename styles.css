@@ -7,7 +7,7 @@ html, body {
   padding: 0;
   background: #0b0d10;
   color: #c8ced8;
-  font: 15px/1.45 "Segoe UI", system-ui, -apple-system, sans-serif;
+  font: 15px/1.45 sans-serif;
   height: 100%;
 }
 
@@ -61,7 +61,7 @@ body {
 
 #out {
   white-space: pre-wrap;
-  font: 12px/1.5 "Courier New", Consolas, monospace;
+  font: 12px/1.5 monospace;
   background: #11151b;
   border: 1px solid #1e2732;
   border-radius: 6px;

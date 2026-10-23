@@ -1,9 +1,7 @@
 (function () {
 	var stateEl = document.getElementById("state");
 	var detEl = document.getElementById("det");
-	var cacheEl = document.getElementById("cache");
 	function setState(t, c) { stateEl.textContent = t; stateEl.className = c || ""; }
-	function setCache(t, ok) { cacheEl.textContent = t; cacheEl.className = ok ? "cacheok" : ""; }
 	var params = new URLSearchParams(location.search);
 
 	var key = null, fwnum = null;
@@ -49,51 +47,5 @@
 		window.addEventListener("keydown", fire);
 	}
 
-	var ac = window.applicationCache;
-	if (!ac || !document.documentElement.hasAttribute("manifest")) {
-		go();
-	} else if (!navigator.onLine) {
-		setCache("offline -- from cache", true);
-		go();
-	} else if (ac.status === ac.IDLE) {
-		setCache("cached", true);
-		go();
-	} else if (ac.status === ac.UPDATEREADY) {
-		try { ac.swapCache(); } catch (e) {}
-		setCache("update downloaded", true);
-		waitForTap("UPDATE READY -- press X or tap to reload & run",
-				   function () { location.reload(); });
-	} else {
-		setCache("checking cache...");
-		ac.addEventListener("downloading",
-			function () { setCache("caching for offline (first run)..."); }, false);
-		ac.addEventListener("progress", function (e) {
-			if (e && e.total)
-				setCache("caching " + Math.round((e.loaded / e.total) * 100) + "%");
-		}, false);
-
-		ac.addEventListener("cached", function () {
-			setCache("cached for offline use", true);
-			waitForTap("CACHED (first run) -- press X or tap to run", go);
-		}, false);
-		ac.addEventListener("updateready", function () {
-			try { ac.swapCache(); } catch (e) {}
-			setCache("update downloaded", true);
-			waitForTap("UPDATE READY -- press X or tap to reload & run",
-					   function () { location.reload(); });
-		}, false);
-
-		ac.addEventListener("noupdate", function () {
-			setCache("cached -- offline ready", true);
-			go();
-		}, false);
-		ac.addEventListener("error", function () {
-			setCache("cache unavailable");
-			waitForTap("CACHE FAILED -- press X or tap to run anyway", go);
-		}, false);
-		ac.addEventListener("obsolete", function () {
-			setCache("cache obsolete");
-			waitForTap("CACHE OBSOLETE -- press X or tap to run", go);
-		}, false);
-	}
+	go();
 })();
